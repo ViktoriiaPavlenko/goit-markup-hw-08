@@ -1,0 +1,124 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $thirdBgColor;
+}
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.contacts {
+  margin-right: 70px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+.address__location {
+  margin-bottom: 9px;
+  color: $primaryWhiteColor;
+
+  font-style: normal;
+}
+.address__mail {
+  margin-bottom: 9px;
+}
+.address__item {
+  color: $addressColor;
+
+  font-style: normal;
+
+  transition: color $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+.join {
+  margin-right: 93px;
+}
+.page-footer__title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $primaryWhiteColor;
+}
+.join__list {
+  display: flex;
+}
+.join__item {
+  margin-right: 10px;
+}
+.join__link {
+  @extend %flex;
+  width: 44px;
+  height: 44px;
+  background: $footerIconBgColor;
+  border-radius: 50%;
+
+  transition: background-color $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: $accentColor;
+  }
+}
+.join__icon {
+  fill: $primaryWhiteColor;
+}
+.subscribe {
+  padding-top: 12px;
+}
+.subscribe__info {
+  display: flex;
+  align-items: center;
+}
+.subscribe__input {
+  @include bordered(rgba(255, 255, 255, 0.3));
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 15px 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.subscribe__button {
+  @extend %button;
+  display: flex;
+  align-items: center;
+  padding: 10px 28px 10px 29px;
+  background-color: $accentColor;
+  box-shadow: $mainBoxShadow;
+
+  transition: background-color $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $buttonBgColor;
+  }
+}
+.subscribe__text {
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  margin-right: 10px;
+
+  color: $primaryWhiteColor;
+}

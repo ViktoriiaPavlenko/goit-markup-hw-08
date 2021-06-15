@@ -1,0 +1,121 @@
+.team-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  background-color: $secondBgColor;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.team-section__title {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+.workers-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: -15px;
+  }
+}
+.worker-card {
+  background-color: $primaryWhiteColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.worker-card__photo {
+  width: 450px;
+  height: 460px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
+}
+.worker-card__info {
+  padding: 30px 122px 24px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 30px 74px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
+}
+.worker-card__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+
+  color: $titleTextColor;
+}
+.worker-card__position {
+  font-size: 16px;
+  line-height: 1.18;
+
+  margin-bottom: 16px;
+}
+.worker-card__social-list {
+  display: flex;
+}
+.worker-card__social-list-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.worker-card__social-link {
+  @extend %flex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: $accentColor;
+  }
+}
+.worker-card__social-link-icon {
+  fill: $iconColor;
+
+  transition: fill $transitionDuration $transitionTimingFunction;
+
+  .worker-card__social-link:hover &,
+  .worker-card__social-link:focus & {
+    fill: $primaryWhiteColor;
+  }
+}

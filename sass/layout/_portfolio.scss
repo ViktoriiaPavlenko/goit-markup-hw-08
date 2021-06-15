@@ -1,0 +1,106 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio__filter-list {
+  @extend %flex;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+.portfolio__filter-list-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.portfolio__button {
+  @extend %button;
+  padding: 6px 22px;
+
+  color: $titleTextColor;
+  background-color: $secondBgColor;
+
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+
+  transition: color $transitionDuration $transitionTimingFunction,
+    background-color $transitionDuration $transitionTimingFunction,
+    box-shadow $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$cardSetGap});
+  margin-top: calc(-1 * #{$cardSetGap});
+}
+.grid__item {
+  flex-basis: calc(100% / 3 - #{$cardSetGap});
+  margin-left: $cardSetGap;
+  margin-top: $cardSetGap;
+
+  transition: box-shadow $transitionDuration $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.card__link {
+  color: $primaryTextColor;
+}
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.card__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform $transitionDuration $transitionTimingFunction;
+
+  .card__link:hover &,
+  .card__link:focus & {
+    transform: translateY(0);
+  }
+}
+.card__text {
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: $primaryWhiteColor;
+}
+.card__content {
+  @include bordered($portfolioBorderColor);
+  padding: 20px 24px;
+  border-top: none;
+}
+.card__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: $titleTextColor;
+}
+.card__type {
+  font-size: 16px;
+  line-height: 1.87;
+}
