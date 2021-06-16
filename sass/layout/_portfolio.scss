@@ -1,13 +1,29 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @extend %padding;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .portfolio__filter-list {
-  @extend %flex;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
   margin-top: 0;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .portfolio__filter-list-item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
   &:not(:last-child) {
     margin-right: 8px;
   }
@@ -36,15 +52,26 @@
   }
 }
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * #{$cardSetGap});
-  margin-top: calc(-1 * #{$cardSetGap});
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .grid__item {
-  flex-basis: calc(100% / 3 - #{$cardSetGap});
-  margin-left: $cardSetGap;
-  margin-top: $cardSetGap;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
 
   transition: box-shadow $transitionDuration $transitionTimingFunction;
 
@@ -60,6 +87,18 @@
 .card__thumb {
   position: relative;
   overflow: hidden;
+}
+.card__img {
+  width: 450px;
+  height: 294px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 .card__overlay {
   position: absolute;
@@ -79,7 +118,14 @@
   }
 }
 .card__text {
-  padding: 63px 24px;
+  padding: 77px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 
   font-size: 18px;
   line-height: 1.5;

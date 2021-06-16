@@ -1,29 +1,54 @@
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @extend %padding;
 
   background-color: $thirdBgColor;
 }
 .page-footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.page-footer__wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+  }
 }
 .contacts {
-  margin-right: 70px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 61px;
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 .address {
   display: flex;
   flex-direction: column;
   font-style: normal;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 .address__location {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: $primaryWhiteColor;
-
-  font-style: normal;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 .address__mail {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 .address__item {
   color: $addressColor;
@@ -38,7 +63,9 @@
   }
 }
 .join {
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .page-footer__title {
   margin-bottom: 20px;
@@ -50,6 +77,10 @@
 }
 .join__list {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 }
 .join__item {
   margin-right: 10px;
@@ -73,18 +104,22 @@
   fill: $primaryWhiteColor;
 }
 .subscribe {
-  padding-top: 12px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
 }
 .subscribe__info {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 .subscribe__input {
   @include bordered(rgba(255, 255, 255, 0.3));
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
   padding: 15px 16px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -93,12 +128,22 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
   &::placeholder {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
   }
 }
 .subscribe__button {
+  margin: 0 auto;
+
   @extend %button;
   display: flex;
   align-items: center;
