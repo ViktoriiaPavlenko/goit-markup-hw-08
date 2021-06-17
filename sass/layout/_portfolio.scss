@@ -119,6 +119,11 @@
 }
 .card__text {
   padding: 77px 24px;
+  
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: $primaryWhiteColor;
 
   @media screen and (min-width: 768px) {
     padding: 49px 24px;
@@ -126,16 +131,16 @@
   @media screen and (min-width: 1200px) {
     padding: 63px 24px;
   }
-
-  font-size: 18px;
-  line-height: 1.5;
-
-  color: $primaryWhiteColor;
 }
 .card__content {
   @include bordered($portfolioBorderColor);
   padding: 20px 24px;
   border-top: none;
+}
+.card__content--first {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 56px;
+  }
 }
 .card__title {
   margin-bottom: 4px;

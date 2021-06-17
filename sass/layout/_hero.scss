@@ -1,8 +1,8 @@
 .hero {
   max-width: 1600px;
   height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
@@ -11,6 +11,11 @@
   background-size: cover;
   background-color: $heroBgColor;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero__title {
   width: 696px;
@@ -25,6 +30,12 @@
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 42px;
+    width: 360px;
+  }
 }
 .hero__button {
   @extend %button;

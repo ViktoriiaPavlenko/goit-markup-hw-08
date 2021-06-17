@@ -1,7 +1,9 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid $headerBorderColor;
 }
 .page-header__container,
+// .menu-container,
 .main-nav {
   display: flex;
   align-items: center;
