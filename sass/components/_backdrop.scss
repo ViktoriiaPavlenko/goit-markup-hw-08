@@ -2,6 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  overflow-y: scroll;
 
   opacity: 1;
   transition: opacity $transitionDuration $transitionTimingFunction,

@@ -1,14 +1,15 @@
 .modal {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  opacity: 1;
   max-width: 450px;
-  height: 609px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 0) scale(1);
   transition: transform $transitionDuration $transitionTimingFunction,
     opacity $transitionDuration $transitionTimingFunction;
   padding: 40px;
+  @media screen and (min-width: 480px) {
+    max-height: 609px;
+  }
   @media screen and (max-width: 767px) {
     width: calc(100% - 2 * 15px);
   }

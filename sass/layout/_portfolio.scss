@@ -88,18 +88,6 @@
   position: relative;
   overflow: hidden;
 }
-.card__img {
-  width: 450px;
-  height: 294px;
-
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 370px;
-  }
-}
 .card__overlay {
   position: absolute;
   left: 0;
@@ -116,10 +104,13 @@
   .card__link:focus & {
     transform: translateY(0);
   }
+  @media screen and (max-width: 479px) {
+    overflow: auto;
+  }
 }
 .card__text {
   padding: 77px 24px;
-  
+
   font-size: 18px;
   line-height: 1.5;
 
