@@ -103,11 +103,6 @@
 .join__icon {
   fill: $primaryWhiteColor;
 }
-.subscribe {
-  @media screen and (min-width: 1200px) {
-    padding-top: 12px;
-  }
-}
 .subscribe__info {
   @media screen and (min-width: 1200px) {
     display: flex;
