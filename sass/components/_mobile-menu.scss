@@ -43,17 +43,17 @@
   }
   .menu-list__item:not(:last-child),
   .menu-contacts-list__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
   .menu-list {
-    margin-bottom: 40px;
+    margin-bottom: 136px;
   }
   .menu-contacts-list {
     margin-bottom: 64px;
   }
   .menu-list__link {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.17;
     letter-spacing: 0.02em;
 
@@ -71,7 +71,7 @@
     color: $primaryTextColor;
   }
   .menu-contacts-list__link--accent {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.17;
     color: $accentColor;
   }
@@ -87,7 +87,7 @@
   }
   .menu-social-list__link {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.2;
 
     letter-spacing: 0.02em;
